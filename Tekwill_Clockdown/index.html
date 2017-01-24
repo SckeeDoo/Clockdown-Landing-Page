@@ -1,0 +1,98 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>Bootstrap 101 Template</title>
+
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+		<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+
+		<!-- Animate.css -->
+		<link rel="stylesheet" href="lauch/css/animate.css">
+		<!-- Icomoon Icon Fonts-->
+		<link rel="stylesheet" href="launch/css/icomoon.css">
+		<!-- Bootstrap  -->
+		<link rel="stylesheet" href="launch/css/bootstrap.css">
+		<!-- Theme style  -->
+		<link rel="stylesheet" href="launch/css/style.css">
+
+		<!-- Modernizr JS -->
+		<script src="js/modernizr-2.6.2.min.js"></script>
+		<!-- FOR IE9 below -->
+		<!--[if lt IE 9]>
+		<script src="js/respond.min.js"></script>
+
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+
+		<link rel="stylesheet" href="compiled/flipclock.css">
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+		<script src="compiled/flipclock.js"></script>
+	</head>
+	<body>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(launch/images/img_bg_1.jpg);" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<div class="display-t">
+						<div id="logo"></div>
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							<img src="launch/images/logo.png" alt="Paris" width="400" height="300">
+							<h1> </h1>
+							<h1>where people, community, ideas, resources, science and industry meet
+								to identify, facilitate and enhance excellence in information technology.</h1>
+							<div class="clock" style="margin:5em;"></div>
+							<h1>We Are Coming Very Soon!</h1>
+							<h1>Stay tuned!</h1>
+
+							<div class="row">
+
+								<ul class="fh5co-social-icons">
+									<li><a href="#"><i class="icon-email"></i></a></li>
+									<li><a href="#"><i class="icon-facebook"></i></a></li>
+									<li><a href="#"><i class="icon-instagram"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+		<script type="text/javascript">
+			var clock;
+
+			$(document).ready(function() {
+
+				// Grab the current date
+				var currentDate = new Date();
+
+				// Set some date in the future. In this case, it's always Jan 1
+				var futureDate  = new Date(currentDate.getFullYear() + 0, 2, 23);
+
+				// Calculate the difference in seconds between the future and current date
+				var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+				// Instantiate a coutdown FlipClock
+				clock = $('.clock').FlipClock(diff, {
+					clockFace: 'DailyCounter',
+					countdown: true
+				});
+			});
+		</script>
+		
+	</body>
+</html>
